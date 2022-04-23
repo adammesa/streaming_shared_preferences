@@ -112,6 +112,7 @@ Now we can pass `MyAppSettings` down to the widgets that use it:
 
 ```dart
 Future<void> main() async {
+  /// Because we use platform channels to call native code, and runApp has not yet been called, we need the below snippet
   WidgetsFlutterBinding.ensureInitialized();
   /// Obtain instance to streaming shared preferences, create MyAppSettings, and
   /// once that's done, run the app.
